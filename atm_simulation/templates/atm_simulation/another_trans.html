@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block simulator_header %}ATM SIMULATOR{% endblock %}
+
+{% block preview_message %}Do you wish to perform another transaction?{% endblock %}
+
+{% block main_content %}
+    <a href="{% url 'start_atm_operation' %}" class="btn btn-danger">Yes</a>
+    <a href="{% url 'index' %}" class="btn btn-danger">No</a>
+{% endblock %}

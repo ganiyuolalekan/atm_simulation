@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block simulator_header %}ATM SIMULATOR{% endblock %}
+
+{% block preview_message %}Select an amount to proceed:{% endblock %}
+
+{% block main_content %}
+    <a href="{% url 'withdraw_operation' customer.pin '500' %}" class="btn btn-danger">500</a>
+    <a href="{% url 'withdraw_operation' customer.pin '1000' %}" class="btn btn-danger">1000</a>
+    <a href="{% url 'withdraw_operation' customer.pin '2000' %}" class="btn btn-danger">2000</a>
+    <a href="{% url 'withdraw_operation' customer.pin '5000' %}" class="btn btn-danger">5000</a>
+    <a href="{% url 'withdraw_operation' customer.pin '10000' %}" class="btn btn-danger">10000</a>
+    <a href="{% url 'withdraw_operation' customer.pin '20000' %}" class="btn btn-danger">20000</a>
+    <a href="{% url 'collect_trans_amt' customer.pin 'withdraw_operation' %}" class="btn btn-danger">Others</a>
+{% endblock %}

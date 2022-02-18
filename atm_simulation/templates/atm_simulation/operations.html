@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block simulator_header %}ATM SIMULATOR{% endblock %}
+
+{% block preview_message %}Welcome {{ customer.full_name }}! What operation do you wish to perform?{% endblock %}
+
+{% block main_content %}
+  <a href="{% url 'send_money' customer.pin 'acc' %}" class="btn btn-danger">Send Money</a>
+  <a href="{% url 'send_money' customer.pin 'mob' %}" class="btn btn-danger">Buy Airtime</a>
+  <a href="{% url 'button_operations' customer.pin 'withdraw' %}" class="btn btn-danger">
+    Withdraw Cash
+  </a>
+  <a href="{% url 'check_balance' customer.pin %}" class="btn btn-danger">Check Balance</a>
+  <a href="{% url 'change_pin' customer.pin %}" class="btn btn-danger">Change Pin</a>
+{% endblock %}

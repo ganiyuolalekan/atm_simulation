@@ -1,0 +1,32 @@
+.site-background-color {
+  background-color: #c82333;
+}
+
+.site-text-color {
+  color: #c82333;
+  text-decoration: none;
+}
+
+.site-text-color:hover {
+  color: #d93444;
+  text-decoration: none;
+}
+
+.header-text {
+  font-weight: bolder;
+}
+
+.text-color-white {
+  color: white;
+  text-decoration: none;
+}
+
+.simulator-header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.intro-text {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}

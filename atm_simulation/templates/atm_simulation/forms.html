@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block simulator_header %}ATM SIMULATOR{% endblock %}
+
+{% block preview_message %}{{ message }}{% endblock %}
+
+{% block main_content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br/>
+        <button type="submit" class="btn btn-danger">{{ button }}</button>
+        {% if cancel %}
+            <a href="{% url 'start_atm_operation' %}" class="btn btn-danger">Cancel</a>
+        {% endif %}
+    </form>
+    {% if extra %}
+        <p class="mt-4">Here over to <a href="{% url 'start_atm_operation' %}" class="site-text-color">simulating the ATM machine</a>.</p>
+    {% endif %}
+{% endblock %}

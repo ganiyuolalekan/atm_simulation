@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block simulator_header %}ATM SIMULATOR{% endblock %}
+
+{% block preview_message %}Your account balance is <b class="site-text-color">₦{{ amount_left }}</b>{% endblock %}
+
+{% block main_content %}
+    <a href="{% url 'perform_another_trans' %}" class="btn btn-danger">proceed</a>
+{% endblock %}
